@@ -31,7 +31,7 @@ jobs:
         run: npm install
         
       - name: Build Site
-        run: npm run build -- --output-path ./docs/
+        run: npm run build -- --base-href="https://robrownn.github.io/rudimentary/" --output-path ./docs/
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
