@@ -33,7 +33,7 @@ jobs:
         run: npm install
         
       - name: Build Site
-        run: npm run build -- --sourceMap=false --output-path ./docs/
+        run: npm run build -- --output-path ./docs/
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
