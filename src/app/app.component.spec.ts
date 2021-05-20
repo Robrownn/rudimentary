@@ -32,4 +32,11 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('rudimentary app is running!');
   });
+
+  it('should run the test function', () => {
+    const component = new AppComponent();
+    expect(component.tested).toBe(false, 'Not tested at first');
+    component.test();
+    expect(component.tested).toBe(true, 'Tested after test');
+  })
 });
