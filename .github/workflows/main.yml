@@ -29,10 +29,11 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: build
-        run: |
-          npm install
-          ng build --prod --output-path ./docs/
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build Site
+        run: ng build --prod --output-path ./docs/
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
