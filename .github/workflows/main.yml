@@ -22,10 +22,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
       - name: build
         run: |
           npm install
-          ng build --output-path ./docs/
+          ng build --prod --output-path ./docs/
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
