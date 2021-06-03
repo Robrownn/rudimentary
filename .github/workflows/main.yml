@@ -29,7 +29,7 @@ jobs:
         working-directory: ./scripts
         run: |
           chmod +x publish.sh
-          publish.sh
+          publish
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v7.2.1
